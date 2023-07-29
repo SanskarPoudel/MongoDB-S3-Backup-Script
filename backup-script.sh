@@ -18,7 +18,7 @@ PEM_FILE="PATH_TO_PEM_FILE"
 CURRENT_DATE=$(date +%F)
 
 # Backup MongoDB
-mongodump --host "$MONGO_HOST" --port "$MONGO_PORT" --db "$DATABASE_NAME" --username "$MONGO_USERNAME" --password "$MONGO_PASSWORD" "$MONGO_SSL" --sslPEMKeyFile "$PEM_FILE" --sslAllowInvalidCertificates --out "$BACKUP_DIR/$CURRENT_DATE" //MODIFY ACCORDING TO YOUR NEEDS
+mongodump --host "$MONGO_HOST" --port "$MONGO_PORT" --db "$DATABASE_NAME" --username "$MONGO_USERNAME" --password "$MONGO_PASSWORD" "$MONGO_SSL" --sslPEMKeyFile "$PEM_FILE" --sslAllowInvalidCertificates --out "$BACKUP_DIR/$CURRENT_DATE" # MODIFY ACCORDING TO YOUR NEEDS
 
 # Check if backup was successful
 if [ $? -eq 0 ]; then
